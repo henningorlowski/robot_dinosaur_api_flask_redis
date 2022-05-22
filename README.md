@@ -26,18 +26,22 @@ docker-compose up -d
 ## API-Commands for CURL and / or Browser
 ### Create Robot at a certain position (width, height) and a certain orientation (up, left, down, right)
 ```shell
+#PUT Request
 http://localhost:5000/robot/<width>/<height>/<orientation>
 ```
 ### Create a Dinosaur at a certain position (width, height). Dinosaurs don't have an orientation
 ```shell
+#PUT Request
 http://localhost:5000/dinosaur/<width>/<height>
 ```
 ### Get the current state of the game as JSON. Returns width, height, type (robot, dinosaur, empty) and orientation ("only relevant for robots")
 ```shell
+#GET Request
 http://localhost:5000/dinosaur/state
 ```
 ### Issue a command for a robot at a cerain position (width, height) on the playing field. Possible commands (forward, backward, attack, turn_left, turn_right)
 ```shell
+#PUT Request
 http://localhost:5000/command/<width>/<height>/<command>
 ```
   
