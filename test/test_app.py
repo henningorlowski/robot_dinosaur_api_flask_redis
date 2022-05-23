@@ -1,20 +1,15 @@
 import unittest
-from unittest import result
-import numpy as np
 from app import app
 from game.game_engine import GameEngine
-import requests
-from flask import Flask, jsonify, render_template
-#Flask-Redis Bridge
-from flask_redis import FlaskRedis
-#waitress server for deployment
+from redis import Redis
 
 class TestBase(unittest.TestCase):
     #Reference started app
     def setUp(self):
         self.app = app.test_client()
         #Connect Redis DB
-        self.redis_client = FlaskRedis(app)
+        #Development only. Will fail inside Docker container. Swap localhost for redis if you want to run the tests inside Docker
+        self.redis_client = Redis(host = "localhost")
         #Initialize Game: height = 50 fields, width = 50 fields
         self.game_client = GameEngine(self.redis_client, 50, 50)
         return app

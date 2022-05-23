@@ -1,8 +1,7 @@
-#Flask Server and Request-utilities
 from flask import Flask
 #Redis Server for playingfield-persistence
 from redis import Redis
-#Waitress server for deployment
+#WSGI Server
 from waitress import serve
 #Game Logic
 from game.game_engine import GameEngine
@@ -11,7 +10,7 @@ import json
 #Start Flask Server
 app = Flask(__name__)
 #Connect Redis DB
-redis_client = Redis(host = "redis", port = 6379)
+redis_client = Redis(host = "redis")
 #Initialize Game: height = 50 fields, width = 50 fields
 game_client = GameEngine(redis_client, 50, 50)
 
@@ -65,4 +64,5 @@ if __name__ == "__main__":
 	print("Waitress started. API running.")
 	#Run WSGI deployment server. Listen @port 5000
 	serve(app, host='0.0.0.0', port=5000)
+	
 	print("API closed.")
