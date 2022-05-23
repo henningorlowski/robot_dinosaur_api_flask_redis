@@ -1,4 +1,4 @@
-# Solution Coding-Challange - Robots vs Dinosaurs
+# Solution Coding-Challenge - Robots vs Dinosaurs
 ## Flask as REST-API and Redis as database for the game
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -14,7 +14,7 @@ Grover is assembling an army of remote-controlled robots to fight the dinosaurs 
 - Display the simulation's current state;
 - Two or more entities (robots or dinosaurs) cannot occupy the same position;
 - Attempting to move a robot outside the simulation space is an invalid operation.
-- 100% coverage ofUnit- and Integrationtests.
+- 100% coverage of Unit- and Integrationtests.
 
 ## Quick Start with Docker Compose
 
