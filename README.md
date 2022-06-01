@@ -2,7 +2,7 @@
 ## Flask as REST-API and Redis as database for the game
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Grover is assembling an army of remote-controlled robots to fight the dinosaurs and the first step towards that is to run simulations on how they will perform. You are tasked with implementing a service that provides a REST API to support those simulations
+We assemble an army of remote-controlled robots to fight the dinosaurs and the first step towards that is to run simulations on how they will perform. You are tasked with implementing a service that provides a REST API to support those simulations
 
 ## Features
 - Able to create an empty simulation space - an empty 50 x 50 grid;
@@ -43,6 +43,3 @@ Issue a command for a robot at a cerain position (width, height) on the playing 
 #PUT Request
 http://localhost:5000/command/<width>/<height>/<command>
 ```
-  
-## Thank you
-Thank you very much at Grover for the opportunity to join this Coding-Challenge.
